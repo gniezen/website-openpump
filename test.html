@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"> </script>
+    <script type="text/javascript">
+        google.load("feeds", "1")
+    </script>
+    </head>
+    <body>
+        <div id="feedContainer" ></div>
+        <script type="text/javascript">
+            var feedUrl = "http://blog.yojimbocorp.com/feed/";
+            var feedContainer=document.getElementById("feedContainer");
+ 
+            $(document).ready(function() {
+                var feed = new google.feeds.Feed(feedUrl);
+                feed.setNumEntries(10);
+                feed.load( function(result) {
+                    list = "<ul>";
+                    if (!result.error){
+                        var posts=result.feed.entries;
+                        for (var i = 0; i < posts.length; i++) {
+                            list+="<li><a href='" + posts[i].link + "'target=_blank'" + "'>" + posts[i].title + "</a></li>";
+                        }
+                        list+="</ul>";
+                        feedContainer.innerHTML = list;
+                    }
+                    else {
+                        feedContainer.innerHTML = "Unable to fetch feed from " + feedUrl;
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
