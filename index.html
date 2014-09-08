@@ -68,7 +68,7 @@
                 <li><a href="single-project.html">SINGLE PROJECT</a></li>
               </ul>
             </li> -->
-          </ul>  
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -190,7 +190,7 @@
                     <script type="text/javascript">
                         var feedUrl = "http://blog.openpump.org/feed/";
                         var feedContainer=document.getElementById("feedContainer");
-             
+
                         $(document).ready(function() {
                             var feed = new google.feeds.Feed(feedUrl);
                             feed.setNumEntries(5);
@@ -200,7 +200,7 @@
                                     var posts=result.feed.entries;
                                     for (var i = 0; i < posts.length; i++) {
                                         list+="<p><a href='" + posts[i].link + "'target=_blank'" + "'>" + posts[i].title + "</a></p>";
-                                    }                        
+                                    }
                                     feedContainer.innerHTML = list;
                                 }
                                 else {
@@ -259,7 +259,8 @@
 		 			<div class="hline-w"></div>
 		 			<p>Openpump is an open-source hardware project to build infusion pumps, like syringe drivers and peristaltic pumps, that can be used in healthcare and laboratory environments. </p>
 <p>Contact us at <a href="mailto:hello@openpump.org">hello@openpump.org</a></p>
-		 		</div>
+
+         </div>
 		 		<div class="col-lg-4">
 		 			<h4>Other places to find us</h4>
 		 			<div class="hline-w"></div>
@@ -268,6 +269,16 @@
 		 				<a href="http://github.com/gniezen/openpump"><i class="fa fa-github"></i></a>
 		 				<!-- <a href="#"><i class="fa fa-tumblr"></i></a> -->
 		 			</p>
+
+           <br/>
+
+           <p align="center">
+             <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+           <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
+           <br />
+           <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">Isometric Syringe Pump</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://openpump.org" property="cc:attributionName" rel="cc:attributionURL">Riaan Niezen</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+           </p>
 		 		</div>
 		 		<div class="col-lg-4">
 		 			<h4>Our Lab</h4>
